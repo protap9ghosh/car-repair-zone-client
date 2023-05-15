@@ -4,7 +4,7 @@ import logo from "../../../assets/logo.svg";
 const Footer = () => {
    return (
       <div>
-         <footer className="footer p-10 bg-base-200 text-base-content">
+         <footer className="footer p-10 bg-stone-950 text-white">
             <div>
                <Link to="/">
                   <img src={logo} alt="Logo" />
