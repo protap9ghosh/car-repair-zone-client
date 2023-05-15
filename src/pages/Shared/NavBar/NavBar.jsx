@@ -8,7 +8,7 @@ const NavBar = () => {
    </>
 
    return (
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 py-6">
          <div className="navbar-start">
             <div className="dropdown">
                <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +29,7 @@ const NavBar = () => {
             </ul>
          </div>
          <div className="navbar-end">
-            <button className="btn btn-outline btn-error">Appointment</button>
+            <button className="btn btn-outline capitalize text-[16px] text-[#FF3811] hover:bg-[#eb5c3f] hover:border-orange-700 mr-5">Appointment</button>
          </div>
       </div>
    );
