@@ -29,7 +29,7 @@ const NavBar = () => {
             </ul>
          </div>
          <div className="navbar-end">
-            <button className="btn btn-outline capitalize text-[16px] text-[#FF3811] hover:bg-[#eb5c3f] hover:border-orange-700 mr-5">Appointment</button>
+            <button className="btn btn-outline capitalize text-[16px] text-[#FF3811] hover:bg-[#d83312] hover:border-orange-700 mr-5">Appointment</button>
          </div>
       </div>
    );

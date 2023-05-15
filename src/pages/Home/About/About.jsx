@@ -17,7 +17,7 @@ const About = () => {
                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable.</p>
 
                <p>the majority have suffered alteration in some form, by injected humour, or randomizes words which do not look even slightly believable.</p>
-               <button className="btn capitalize text-[16px] bg-[#FF3811] hover:bg-[#e0320f] border-none">Get More Info</button>
+               <button className="btn capitalize text-[16px] bg-[#FF3811] hover:bg-[#d83312] border-none">Get More Info</button>
             </div>
          </div>
       </div>
