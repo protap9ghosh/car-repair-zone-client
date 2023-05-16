@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Img from "../../assets/images/login/login.svg"
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const SignUp = () => {
+   const { createUser } = useContext(AuthContext);
+
    const handleSignUp = (event) => {
       event.preventDefault();
       const form = event.target;
       const name = form.name.value;
       const email = form.email.value;
-      const user = { name, email }
+      const password = form.password.value;
+      const user = { name, email, password }
       console.log(user);
+
+      createUser(email, password)
+         .then(result => {
+            const user = result.user;
+            console.log(user);
+         })
+         .catch(error => {
+            console.log(error);
+         })
    }
 
    return (
@@ -27,21 +40,21 @@ const SignUp = () => {
                         <label className="label">
                            <span className="label-text">Name</span>
                         </label>
-                        <input type="text" name='name' placeholder="Your name" className="input input-bordered" />
+                        <input type="text" name='name' placeholder="Your name" className="input input-bordered" required />
                      </div>
 
                      <div className="form-control">
                         <label className="label">
                            <span className="label-text">Email</span>
                         </label>
-                        <input type="text" name='email' placeholder="Your email" className="input input-bordered" />
+                        <input type="email" name='email' placeholder="Your email" className="input input-bordered" required />
                      </div>
 
                      <div className="form-control">
                         <label className="label">
                            <span className="label-text">Password</span>
                         </label>
-                        <input type="text" name='password' placeholder="Your password" className="input input-bordered" />
+                        <input type="password" name='password' placeholder="Your password" className="input input-bordered" required />
                      </div>
 
                      <div className="form-control mt-6 mb-10">
