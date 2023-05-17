@@ -15,9 +15,11 @@ const NavBar = () => {
    const navItems = <>
       <li><Link to="/">Home</Link></li>
       <li><Link>About</Link></li>
-      {user?.email ? <li><button onClick={handleLogOut}>Sign Out</button></li> :
-         <li><Link to="/signIn">Sign In</Link></li>}
-      {/* <li><Link to="/signUp">Sign UP</Link></li> */}
+      {user?.email ? <>
+         <li><Link to="/booking">My Bookings</Link></li>
+         <li><button onClick={handleLogOut}>Sign Out</button></li>
+      </>
+      : <li><Link to="/signIn">Sign In</Link></li>}
    </>
 
    return (
