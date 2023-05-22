@@ -19,7 +19,7 @@ const Services = () => {
             <p className='md:w-1/2 mx-auto capitalize'>the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
 
             <button className='btn btn-outline text-[16px] capitalize' onClick={() => setAscending(!ascending)}>
-               {ascending ? 'Price High to Low' : 'Price Low to High'}
+               {ascending ? 'Price: High to Low' : 'Price: Low to High'}
             </button>
          </div>
 
