@@ -47,6 +47,11 @@ const Bookings = () => {
             console.log(data);
             if (data.modifiedCount > 0) {
                // update state
+               const remaining = bookings.filter(booking => booking._id !== id);
+               const updated = bookings.find(booking => booking._id === id);
+               updated.status = 'confirm';
+               const newBookings = [updated, ...remaining];
+               setBookings(newBookings);
             }
          })
    }
