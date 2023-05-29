@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../providers/AuthProvider";
-import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
@@ -13,12 +12,6 @@ const SocialLogin = () => {
       googleSignIn()
          .then((result) => {
             console.log(result.user);
-            Swal.fire({
-               title: 'Success',
-               text: 'User sign In Successful',
-               icon: 'success',
-               confirmButtonText: 'OK'
-            })
             navigate('/');
          })
          .then((error) => {
@@ -30,7 +23,7 @@ const SocialLogin = () => {
       <div>
          <div className="divider">OR</div>
          <div className="text-center">
-            <button className="btn btn-circle btn-outline border-none bg-[#E8E8E8] hover:bg-[#d3d0d0] text-2xl">
+            <button className="btn btn-circle btn-outline border-none bg-[#E8E8E8] hover:bg-[#d3d0d0] text-2xl text-blue-700 hover:text-blue-700">
                <FaFacebookF />
             </button>
 
